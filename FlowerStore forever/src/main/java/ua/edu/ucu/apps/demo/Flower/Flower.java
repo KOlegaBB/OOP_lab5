@@ -2,6 +2,7 @@ package ua.edu.ucu.apps.demo.Flower;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ua.edu.ucu.apps.demo.Item.Item;
 
@@ -13,23 +14,21 @@ import javax.persistence.Table;
 @Entity
 @Table
 @Setter
+@Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Flower extends Item {
-    @Getter
     private double sepalLength;
-    private FlowerColor color;
+    private String color;
     private double price;
 
     @Id
     @GeneratedValue
     private Long id;
 
-    public Flower() {
-
-    }
 
     public String getColor() {
-        return color.toString();
+        return color;
     }
 
     @Override
