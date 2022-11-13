@@ -16,3 +16,6 @@ jobs:
       - name: Test with Maven
         run: mvn --batch-mode --update-snapshots package
         working-directory: ./FlowerStore beginning
+      - name: Test with Maven
+        run: mvn --batch-mode --update-snapshots package
+        working-directory: ./FlowerStore continue
